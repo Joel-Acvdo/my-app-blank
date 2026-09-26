@@ -5,6 +5,7 @@ import InicioScreen from './screens/InicioScreen';
 import DetalleScreen from './screens/DetalleScreen';
 import FormularioScreen from './screens/FormularioScreen';
 import PerfilScreen from './screens/PerfilScreen';
+import LicenciaScreen from './screens/LicenciaScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,6 +25,8 @@ return (
               iconName = 'create';
             } else if (route.name === 'Perfil') {
               iconName = 'person';
+            } else if (route.name === 'Licencia') {
+              iconName = 'card';
             }
             return <Ionicons name={iconName} size={size} color={color} />;
           },
@@ -36,6 +39,7 @@ return (
         <Tab.Screen name="Detalle" component={DetalleScreen} />
         <Tab.Screen name="Formulario" component={FormularioScreen} />
         <Tab.Screen name="Perfil" component={PerfilScreen}/>
+        <Tab.Screen name="Licencia" component={LicenciaScreen} />
 
 
       </Tab.Navigator>
